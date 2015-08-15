@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/PallabDV/JS-Exercises",
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
     "jasmine-node": "^1.14.5"
   }
 }
