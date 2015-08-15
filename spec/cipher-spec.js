@@ -19,6 +19,33 @@ describe("encode", function() {
 		expect(cipher.encode('no')).toEqual('ml');
 	});
 
-	//Keep adding your test case following the above template for your local tests.
-	//DO NOT COMMIT THIS FILE.
+	it("encodes yes", function() {
+    	expect(cipher.encode('yes')).toEqual('bvh');
+  	});
+
+  	it("encodes OMG", function() {
+	    expect(cipher.encode('OMG')).toEqual('lnt');
+  	});
+
+  	it("encodes O M G", function() {
+	    expect(cipher.encode('O M G')).toEqual('lnt');
+  	});
+
+  	it("encodes long words", function() {
+	    expect(cipher.encode('mindblowingly')).toEqual('nrmwy oldrm tob');
+  	});
+
+  	it("encodes numbers", function() {
+	    expect(cipher.encode('Testing, 1 2 3, testing.'))
+	      .toEqual('gvhgr mt123 gvhgr mt');
+  	});
+
+  	it("encodes sentences", function() {
+	    expect(cipher.encode('Truth is fiction.')).toEqual('gifgs rhurx grlm');
+  	});
+
+  	it("encodes all the things", function() {
+	    expect(cipher.encode('The quick brown fox jumps over the lazy dog.'))
+	      .toEqual('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt');
+  	});
 });
